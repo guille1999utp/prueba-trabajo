@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" >
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>´
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>prueba
+     </title>
+   </head>
+<body>
+  <!-- creamos la barra de menu sidebar y creamos estilo--> 
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Menú </div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a class="ac" href="#">
+            <i class='bx bxs-tag-alt'></i>
+          <span class="links_name">Listado Heroes</span>
+        </a>
+         <span class="tooltip">Listado Heroes</span>
+      </li>
+      <li>
+       <a class="ac" href="#">
+        <i class='bx bx-plus'></i>
+         <span class="links_name">Añadir Heroes</span>
+       </a>
+       <span class="tooltip">Añadir Heroes</span>
+     </li>
+     <li>
+       <a class="ac" href="#">
+        <i class='bx bx-search' ></i>
+         <span class="links_name">Buscar Heroes</span>
+       </a>
+       <span class="tooltip">Buscar Heroes</span>
+     </li>
+    </ul>
+  </div>
+  <!--titulo de la pagina --> 
+<div class="containlist">
+  <H2>Lista de Heroes</H2>
+</div>
+<!-- creamos contenedor para diseñar con metodos grid para hacer la pagina responsive con sus correspodientes etiquetas--> 
+  <div class="containermayor">
+  <div class="box">
+  <div class="card">
+  <div class="titledes">
+  <h3>Flash</h3>
+  <h6>Barry Allen</h6>
+  </div>
+  <figure>
+      <img src="assets/flash.png">
+  </figure>
+  <div class="contenido">
+    <h4>DC Comics</h4>
+    <p><b>Primera Aparicíon: </b> Flash Comics #1 </p>
+    <p><b>Personaje: </b> Barry Allen</p>
+    <br>
+    <a class="at" href="caracteristicas.html">leer más...</a>
+    <br>
+    <br>
+  </div>
+   </div>
+</div>
+<div class="box">
+  <div class="card">
+  <div class="titledes">
+  <h3>Batman</h3>
+  <h6>Bruce Wayne. V. M.</h6>
+  </div>
+  <figure>
+      <img src="assets/batman.png">
+  </figure>
+  <div class="contenido">
+    <h4>DC Comics</h4>
+    <p><b>Primera Aparicíon: </b> Detective Comics Vol 1</p>
+    <p><b>Personaje: </b> Bruce Wayne</p>
+    <br>
+    <a class="at" href="caracteristicasbatman.html">leer más...</a>
+    <br>
+    <br>
+  </div>
+   </div>
+</div><div class="box">
+  <div class="card">
+  <div class="titledes">
+  <h3>DeadPool</h3>
+  <h6>Wade Winston Wilson</h6>
+  </div>
+  <figure>
+      <img src="assets/deadpool.png" >
+  </figure>
+  <div class="contenido">
+    <h4>Marvel Comics</h4>
+    <p><b>Primera Aparicíon: </b> The New Mutants Nº 98</p>
+    <p><b>Personaje: </b> Wade Winston Wilson</p>
+    <br>
+    <a class="at" href="caracteristicasded.html">leer más...</a>
+    <br>
+    <br>
+  </div>
+   </div>
+</div>
+<div class="box">
+  <div class="card">
+  <div class="titledes">
+  <h3>Iron Man</h3>
+  <h6>Tony Stark</h6>
+  </div>
+  <figure>
+      <img src="assets/ironman.png">
+  </figure>
+  <div class="contenido">
+    <h4>Marvel Comics</h4>
+    <p><b>Primera Aparicíon: </b> Iron Man #1</p>
+    <p><b>Personaje: </b> Tony Stark, peper</p>
+    <br>
+    <a class="at" href="caracteristicasiron.html">leer más...</a>
+    <br>
+    <br>
+  </div>
+
+   </div>
+</div>
+</div>
+<!-- creamos un codigo javascrypt para poder cambiar las propiedas class del sidebar y asi poder hacer el bueno despliegue de este--> 
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  // creamos este metodo para cuando haya un evento click en el boton de cambiar la clase del sidebar
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+ // creamos este metodo para cambiar el icono de menu al momento de desplegar
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+</body>
+</html>
